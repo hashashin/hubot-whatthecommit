@@ -20,6 +20,6 @@ module.exports = (robot) ->
     robot.http("http://whatthecommit.com")
       .get() (err, res, body) ->
         $ = cheerio.load(body)
-        scrape = $('#content p').text()
+        scrape = $('#content p').first().text()
 
         msg.send scrape
