@@ -1,0 +1,16 @@
+chai = require 'chai'
+sinon = require 'sinon'
+chai.use require 'sinon-chai'
+
+expect = chai.expect
+
+describe 'whatthecommit', ->
+  beforeEach ->
+    @robot =
+      respond: sinon.spy()
+      hear: sinon.spy()
+
+    require('../src/whatthecommit')(@robot)
+
+  it 'registers a hear listener', ->
+    expect(@robot.hear).to.have.been.calledWith(/(commit\?)$/i)
