@@ -1,5 +1,5 @@
 # Description
-#   whatthecommit.com scrapes for hubot
+#   whatthecommit.com scrapes for Hubot
 #
 # Configuration:
 #   none
@@ -11,7 +11,7 @@
 #   commit? - returns a random commit message from whatthecommit.com
 #
 # Author:
-#   Nick Fletcher [@nickfletchr]
+#   nickfletcher
 
 cheerio = require 'cheerio'
 
@@ -20,6 +20,6 @@ module.exports = (robot) ->
     robot.http("http://whatthecommit.com")
       .get() (err, res, body) ->
         $ = cheerio.load(body)
-        scrape = $('#content p').first().text()
+        commit = $('#content p').first().text()
 
-        msg.send scrape
+        msg.send commit
