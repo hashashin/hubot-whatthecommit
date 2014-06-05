@@ -15,11 +15,11 @@
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-whatthecommit.git"
+    "url": "git://github.com/nickfletcher/hubot-whatthecommit.git"
   },
 
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-whatthecommit/issues"
+    "url": "https://github.com/nickfletcher/hubot-whatthecommit/issues"
   },
 
   "dependencies": {
