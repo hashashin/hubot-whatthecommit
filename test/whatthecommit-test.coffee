@@ -13,4 +13,4 @@ describe 'whatthecommit', ->
     require('../src/whatthecommit')(@robot)
 
   it 'registers a hear listener', ->
-    expect(@robot.hear).to.have.been.calledWith(/(commit\?)$/i)
+    expect(@robot.hear).to.have.been.calledWith(/^(commit\?)$/i)
