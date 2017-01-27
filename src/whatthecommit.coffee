@@ -16,7 +16,7 @@
 cheerio = require 'cheerio'
 
 module.exports = (robot) ->
-  robot.hear /^(commit\?)$/i, (msg) ->
+  robot.respond /commit\?/i, (msg) ->
     robot.http("http://whatthecommit.com")
       .get() (err, res, body) ->
         $ = cheerio.load(body)
